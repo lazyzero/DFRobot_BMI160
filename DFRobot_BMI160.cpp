@@ -17,7 +17,7 @@ const uint8_t int_mask_lookup_table[13] = {
 
 DFRobot_BMI160::DFRobot_BMI160()
 {
-  Wire.begin();
+  Wire.begin(16, 17);
   Obmi160=(struct bmi160Dev *)malloc(sizeof(struct bmi160Dev));
   //Obmi160->id = BMI160_I2C_ADDR;
   //Obmi160->interface = BMI160_I2C_INTF; 
